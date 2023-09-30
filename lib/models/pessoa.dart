@@ -9,27 +9,37 @@ class Pessoa {
     return _nome;
   }
 
-  set nome(String value) {
-    _nome = value;
+  void setNome(String nome) {
+    _nome = nome;
   }
 
   double getPeso() {
     return _peso;
   }
 
-  set peso(double value) {
-    _peso = value;
+  void setPeso(double peso) {
+    _peso = peso;
   }
 
   double getAltura() {
     return _altura;
   }
 
-  set altura(double value) {
-    _altura = value;
+  void setAltura(double altura) {
+    _altura = altura;
   }
 
   double calcularIMC() {
     return _peso / (_altura * _altura);
+  }
+
+  @override
+  String toString() {
+    return {
+      'Nome': _nome,
+      'Peso': _peso,
+      'Altura': _altura,
+      'IMC': calcularIMC()
+    }.toString();
   }
 }
