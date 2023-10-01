@@ -1,18 +1,22 @@
-import 'dart:io';
-
+import 'package:calculadora_imc/calculadora_imc.dart';
 import 'package:calculadora_imc/models/pessoa.dart';
 
 void main(List<String> arguments) {
-  print('BEM-VINDO A CALCUADORA DE IMC');
-  print('=============================');
+  print(
+      '=============================BEM-VINDO A CALCULADORA DE IMC==============================');
+  print(
+      '=========================================================================================');
   print('');
-  print('Digite seu nome:');
-  var nome = stdin.readLineSync();
-  print('Digite seu peso:');
-  var peso = double.parse(stdin.readLineSync()!);
-  print('Digite sua altura:');
-  var altura = double.parse(stdin.readLineSync()!);
-  var pessoa = Pessoa(nome!, peso, altura);
-  print('=============================');
+  var nome = lerNome();
+  var peso = lerPeso();
+  var altura = lerAltura();
+  var pessoa = Pessoa(nome, peso, altura);
+  print('');
+  print(
+      '=========================================================================================');
+  print('');
   print(pessoa.toString());
+  print('');
+  print(
+      '=========================================================================================');
 }
